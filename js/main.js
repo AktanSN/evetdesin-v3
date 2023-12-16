@@ -35,7 +35,7 @@
 
         // WhatsApp mesaj fonksiyonu
         function sendWhatsapp() {
-            var phonenumber = "+905369884368";
+            var phonenumber = "+905444550690";
             var name = $('.name').val();
             var surname = $('.surname').val();
             var email = $('.email').val();
