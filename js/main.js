@@ -1,3 +1,5 @@
+
+
 (function ($) {
     "use strict";
 
@@ -9,6 +11,7 @@
             $('.navbar').fadeOut('slow').css('display', 'none');
         }
     });
+    
 
 
     // Smooth scrolling on the navbar links
@@ -27,6 +30,33 @@
         }
     });
 
+    $(document).ready(function () {
+        // Mevcut ready bloğunuzun içeriği...
+
+        // WhatsApp mesaj fonksiyonu
+        function sendWhatsapp() {
+            var phonenumber = "+905369884368";
+            var name = $('.name').val();
+            var surname = $('.surname').val();
+            var email = $('.email').val();
+            var phone = $('.phone').val();
+            var message = $('.message').val();
+
+            var url = "https://wa.me/" + phonenumber + "?text=" +
+                      "İsim: " + encodeURIComponent(name) + "%0a" +
+                      "Soyisim: " + encodeURIComponent(surname) + "%0a" +
+                      "Email: " + encodeURIComponent(email) + "%0a" +
+                      "Telefon Numarası: " + encodeURIComponent(phone) + "%0a" +
+                      "Mesaj: " + encodeURIComponent(message) + "%0a%0a" +
+                        "Bu mesaj evetdesin.com üzerinden gönderilmiştir.";
+                      
+
+            window.open(url, '_blank').focus();
+        }
+
+        // Butona tıklandığında WhatsApp mesaj fonksiyonunu çalıştır
+        $('.your-whatsapp-button-class').click(sendWhatsapp);
+    });
 
     // Modal Video
     $(document).ready(function () {

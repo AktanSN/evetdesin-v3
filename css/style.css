@@ -4049,6 +4049,7 @@ input[type="button"].btn-block {
   float: none;
 }
 
+
 .navbar-text {
   display: inline-block;
   padding-top: 0.5rem;
@@ -4231,6 +4232,19 @@ input[type="button"].btn-block {
   flex-flow: row nowrap;
   justify-content: flex-start;
 }
+
+.img-aboutus {
+            width: 100%; /* Full width */
+            height: auto; /* Maintain aspect ratio */
+            max-width: 120px; /* Maximum width */
+            margin: 0 auto; /* Centering the image */
+        }
+
+        @media only screen and (max-width: 768px) {
+            .img-fluid {
+                max-width: 300px; /* Smaller maximum width for smaller devices */
+            }
+        }
 
 .navbar-expand > .container,
 .navbar-expand > .container-fluid, .navbar-expand > .container-sm, .navbar-expand > .container-md, .navbar-expand > .container-lg, .navbar-expand > .container-xl {
@@ -6095,6 +6109,21 @@ a.close.disabled {
 
 .bg-primary {
   background-color: #E47A2E !important;
+}
+
+.h3-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3px; /* Adjust the bottom margin as needed */
+}
+
+.h3-flex-container h3 {
+  margin: 0 10px; /* Adjust the spacing around the h3 tags */
+}
+
+.ampersand {
+  font-size: 1.5em; /* Adjust the size of the ampersand as needed */
 }
 
 a.bg-primary:hover, a.bg-primary:focus,
@@ -9661,6 +9690,16 @@ a.text-dark:hover, a.text-dark:focus {
   margin-bottom: 30px;
 }
 
+.card {
+  transition: transform 0.3s ease; /* Smooth transition for the transform property */
+  margin: 5px 30px 5px 30px;
+}
+
+.card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card on hover */
+  text-decoration: none;
+}
+
 @media (min-width: 768px) {
   .timeline::after {
     position: absolute;
@@ -9761,4 +9800,12 @@ a.text-dark:hover, a.text-dark:focus {
   #event .border-right {
     border-right: none !important;
   }
+}
+
+.hero-btns {
+  margin-top: 32px;
+}
+
+.hero-btns .btn {
+  margin: 6px;
 }
